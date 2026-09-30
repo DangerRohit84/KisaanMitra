@@ -1,0 +1,92 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  theme: {
+    extend: {
+      colors: {
+        // Khet Monsoon palette — field green + haldi + mitti soil + monsoon blue
+        khet: {
+          50: "#f6f8e8",
+          100: "#eaf2c8",
+          200: "#d7e69a",
+          300: "#bdd76a",
+          400: "#9dc33f",
+          500: "#7aa52a",
+          600: "#5e8320",
+          700: "#4a671c",
+          800: "#3d541d",
+          900: "#2f4217",
+          950: "#1a250c",
+        },
+        haldi: {
+          50: "#fffaeb",
+          100: "#fff1c6",
+          200: "#ffe288",
+          300: "#ffcc4a",
+          400: "#ffb81f",
+          500: "#f99607",
+          600: "#dd6f02",
+          700: "#b74f06",
+          800: "#943c0c",
+          900: "#7a320d",
+        },
+        mitti: {
+          50: "#faf6ef",
+          100: "#f2e8d5",
+          200: "#e3cfa9",
+          300: "#d1b07c",
+          400: "#bd8f52",
+          500: "#a9763e",
+          600: "#8a5d32",
+          700: "#6e4a2b",
+          800: "#5c3d26",
+          900: "#4e3423",
+        },
+        monsoon: {
+          50: "#eff8ff",
+          100: "#dbeffe",
+          200: "#bfe3fe",
+          300: "#93d3fd",
+          400: "#60bdfa",
+          500: "#3b9ef6",
+          600: "#2582eb",
+          700: "#1d6fd8",
+          800: "#1e5aaf",
+          900: "#1e4c8a",
+        },
+      },
+      fontFamily: {
+        display: ['"Baloo 2"', '"Mukta"', "system-ui", "sans-serif"],
+        body: ['"Mukta"', "system-ui", "sans-serif"],
+        mono: ['"IBM Plex Mono"', "ui-monospace", "monospace"],
+      },
+      boxShadow: {
+        card: "0 1px 2px rgba(26,37,12,.06), 0 8px 24px -12px rgba(26,37,12,.25)",
+        pop: "0 12px 32px -12px rgba(94,131,32,.45)",
+        "haldi-glow": "0 0 0 4px rgba(255,184,31,.35)",
+      },
+      borderRadius: {
+        "4xl": "2rem",
+      },
+      keyframes: {
+        ticker: { "0%": { transform: "translateX(0)" }, "100%": { transform: "translateX(-50%)" } },
+        scan: { "0%": { top: "4%" }, "50%": { top: "92%" }, "100%": { top: "4%" } },
+        "pulse-ring": {
+          "0%": { boxShadow: "0 0 0 0 rgba(122,165,42,.55)" },
+          "70%": { boxShadow: "0 0 0 14px rgba(122,165,42,0)" },
+          "100%": { boxShadow: "0 0 0 0 rgba(122,165,42,0)" },
+        },
+        shimmer: { "0%": { backgroundPosition: "-400px 0" }, "100%": { backgroundPosition: "400px 0" } },
+        floaty: { "0%,100%": { transform: "translateY(0)" }, "50%": { transform: "translateY(-4px)" } },
+      },
+      animation: {
+        ticker: "ticker 28s linear infinite",
+        scanline: "scan 2.6s ease-in-out infinite",
+        "pulse-ring": "pulse-ring 1.8s ease-out infinite",
+        shimmer: "shimmer 1.4s linear infinite",
+        floaty: "floaty 3.5s ease-in-out infinite",
+      },
+    },
+  },
+  plugins: [],
+};

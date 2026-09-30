@@ -1,0 +1,22 @@
+# KisaanMitra — free Render blueprint (backend only, no card needed)
+# Docs: https://render.com/docs/blueprint-spec
+# Usage: push repo to GitHub -> Render Dashboard -> New -> Blueprint -> select repo.
+# Then set GEMINI_API_KEY + CORS_ORIGIN in Render Dashboard (sync: false = manual, never committed).
+services:
+  - type: web
+    name: kisaanmitra-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: MOCK_MODE
+        value: false
+      - key: CORS_ORIGIN
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false

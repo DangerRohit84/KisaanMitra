@@ -1,0 +1,23 @@
+{
+  "users": [
+    { "id": "demo-farmer-1", "lang": "hi", "name": "Ramesh Patel", "phone": "+91-98XXX-XXXX1", "village": "Sanwer, Indore" }
+  ],
+  "farms": [
+    { "id": "farm-1", "uid": "demo-farmer-1", "geo": { "lat": 22.7196, "lon": 75.8577 }, "crop": "soybean", "acres": 2.5, "sowDate": "2026-07-01" }
+  ],
+  "diagnoses": [
+    {
+      "id": "diag-seed-1",
+      "farmId": "farm-1",
+      "imageUrl": "(uploaded at runtime)",
+      "disease": "Soybean Yellow Mosaic Virus (suspected)",
+      "confidence": 0.82,
+      "remedy": "Uproot 3 severely affected plants; install 6 yellow sticky traps; consult officer before thiamethoxam spray.",
+      "createdAt": "2026-09-28T10:00:00Z"
+    }
+  ],
+  "mandiCache": [
+    { "crop": "soybean", "price": 4892, "market": "Indore", "updatedAt": "2026-09-28T06:00:00Z" },
+    { "crop": "wheat", "price": 2275, "market": "Indore", "updatedAt": "2026-09-28T06:00:00Z" }
+  ]
+}
