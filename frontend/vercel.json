@@ -1,5 +1,4 @@
 {
-  "$comment": "Live backend: https://kisaanmitra-bl8h.onrender.com (Render Dashboard > kisaanmitra-bl8h > URL). No secrets in this file.",
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
